@@ -3,9 +3,12 @@
     {{ partial "bloc/content/h1-title" . }}
     {{ partial "bloc/content/lastupdate" . }}
   </header>
-  {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+
+  {{ .Content }}
+
+  <!--{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
   {{ range $paginator.Pages }}
     {{ .Render "summary" }}
   {{ end }}
-  {{ partial "bloc/content/pagination" . }}
+  {{ partial "bloc/content/pagination" . }}-->
 </section>
